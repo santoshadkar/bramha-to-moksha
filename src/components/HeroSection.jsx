@@ -24,7 +24,7 @@ export function HeroSection({ setActiveTab }) {
               </h2>
 
               <p style={{ color: 'var(--text-muted)', fontSize: '1.02rem', marginBottom: '1.5rem', lineHeight: 1.75 }}>
-                Welcome to the sacred portal of spiritual ascension. Journey step-by-step from the unmanifest non-dual Absolute (**Nirguna Brahman**) and the emergence of the 24 Tattvas through the illusion of **Samsara**, culminating in non-dual freedom (**Moksha**).
+                Welcome to the sacred portal of spiritual ascension. Journey step-by-step from the unmanifest non-dual Absolute (<strong style={{ color: 'var(--text-gold)' }}>Nirguna Brahman</strong>) and the emergence of the 24 Tattvas through the illusion of <strong style={{ color: 'var(--sacred-saffron)' }}>Samsara</strong>, culminating in non-dual freedom (<strong style={{ color: 'var(--cosmic-cyan)' }}>Moksha</strong>).
               </p>
 
               <div style={{ display: 'flex', gap: '0.8rem', flexWrap: 'wrap' }}>
@@ -144,7 +144,7 @@ export function HeroSection({ setActiveTab }) {
                     A. Nirguna Brahman (The Absolute)
                   </h4>
                   <p style={{ color: 'var(--text-muted)', fontSize: '0.88rem', lineHeight: 1.65 }}>
-                    **Sat-Chit-Ananda**: Uncreated Existence, Self-luminous Awareness, and Limitless Bliss. Transcends time, space, and the three internal differences (*Sajatiya, Vijatiya, Svagata Bheda*).
+                    <strong style={{ color: 'var(--text-gold)' }}>Sat-Chit-Ananda</strong>: Uncreated Existence, Self-luminous Awareness, and Limitless Bliss. Transcends time, space, and the three internal differences (<em style={{ color: 'var(--text-gold)' }}>Sajatiya, Vijatiya, Svagata Bheda</em>).
                   </p>
                 </div>
 
@@ -153,7 +153,7 @@ export function HeroSection({ setActiveTab }) {
                     B. Maya & Saguna Ishvara
                   </h4>
                   <p style={{ color: 'var(--text-muted)', fontSize: '0.88rem', lineHeight: 1.65 }}>
-                    Brahman reflected in pure Sattvic Maya manifests as **Ishvara** (Cosmic Governor) with three powers: *Jnana Shakti* (Omniscience), *Iccha Shakti* (Will), and *Kriya Shakti* (Action).
+                    Brahman reflected in pure Sattvic Maya manifests as <strong style={{ color: 'var(--sacred-saffron)' }}>Ishvara</strong> (Cosmic Governor) with three powers: <em style={{ color: 'var(--text-gold)' }}>Jnana Shakti</em> (Omniscience), <em style={{ color: 'var(--text-gold)' }}>Iccha Shakti</em> (Will), and <em style={{ color: 'var(--text-gold)' }}>Kriya Shakti</em> (Action).
                   </p>
                 </div>
 
@@ -162,7 +162,7 @@ export function HeroSection({ setActiveTab }) {
                     C. Projection of 24 Tattvas
                   </h4>
                   <p style={{ color: 'var(--text-muted)', fontSize: '0.88rem', lineHeight: 1.65 }}>
-                    From Mahat (Cosmic Intellect) and Ahamkara (Ego) emerge the **5 Tanmatras** (subtle essences), **5 Elements** (Space, Air, Fire, Water, Earth), and **10 Indriyas** via *Panchikarana*.
+                    From Mahat (Cosmic Intellect) and Ahamkara (Ego) emerge the <strong style={{ color: 'var(--cosmic-cyan)' }}>5 Tanmatras</strong> (subtle essences), <strong style={{ color: 'var(--cosmic-cyan)' }}>5 Elements</strong> (Space, Air, Fire, Water, Earth), and <strong style={{ color: 'var(--cosmic-cyan)' }}>10 Indriyas</strong> via <em style={{ color: 'var(--text-gold)' }}>Panchikarana</em>.
                   </p>
                 </div>
 
@@ -211,7 +211,7 @@ export function HeroSection({ setActiveTab }) {
                     A. Superimposition (Adhyasa)
                   </h4>
                   <p style={{ color: 'var(--text-muted)', fontSize: '0.88rem', lineHeight: 1.65 }}>
-                    Individual ignorance (**Avidya**) veils the Self, causing **Adhyasa**—mistaking the changing non-Self (*Anatman*) for the immortal Self (*Atman*), creating mortal bondage.
+                    Individual ignorance (<strong style={{ color: 'var(--sacred-saffron)' }}>Avidya</strong>) veils the Self, causing <strong style={{ color: 'var(--sacred-saffron)' }}>Adhyasa</strong>—mistaking the changing non-Self (<em style={{ color: 'var(--text-gold)' }}>Anatman</em>) for the immortal Self (<em style={{ color: 'var(--text-gold)' }}>Atman</em>), creating mortal bondage.
                   </p>
                 </div>
 
@@ -229,7 +229,7 @@ export function HeroSection({ setActiveTab }) {
                     C. Karmic Transmigration
                   </h4>
                   <p style={{ color: 'var(--text-muted)', fontSize: '0.88rem', lineHeight: 1.65 }}>
-                    Subconscious impressions (*Vasanas*) drive the wheel of rebirth. **Sanchita** karma accumulates, **Prarabdha** yields present life, and **Agami** shapes future births.
+                    Subconscious impressions (<em style={{ color: 'var(--text-gold)' }}>Vasanas</em>) drive the wheel of rebirth. <strong style={{ color: 'var(--text-gold)' }}>Sanchita</strong> karma accumulates, <strong style={{ color: 'var(--text-gold)' }}>Prarabdha</strong> yields present life, and <strong style={{ color: 'var(--text-gold)' }}>Agami</strong> shapes future births.
                   </p>
                 </div>
 
@@ -278,7 +278,7 @@ export function HeroSection({ setActiveTab }) {
                     A. Praptasya Prapti
                   </h4>
                   <p style={{ color: 'var(--text-muted)', fontSize: '0.88rem', lineHeight: 1.65 }}>
-                    Moksha is not a future event or new creation; it is the discovery of what has **always been true**—the permanent destruction of ignorance (*Avidya-Nivritti*).
+                    Moksha is not a future event or new creation; it is the discovery of what has <strong style={{ color: 'var(--cosmic-cyan)' }}>always been true</strong>—the permanent destruction of ignorance (<em style={{ color: 'var(--text-gold)' }}>Avidya-Nivritti</em>).
                   </p>
                 </div>
 
@@ -287,7 +287,7 @@ export function HeroSection({ setActiveTab }) {
                     B. Jivanmukti & Sahaja State
                   </h4>
                   <p style={{ color: 'var(--text-muted)', fontSize: '0.88rem', lineHeight: 1.65 }}>
-                    The sage lives liberated in the body (**Jivanmukta**), seeing all beings as their own Self (*Sarvatma-Bhava*), operating in effortless *Sahaja Samadhi*.
+                    The sage lives liberated in the body (<strong style={{ color: 'var(--divine-purple)' }}>Jivanmukta</strong>), seeing all beings as their own Self (<em style={{ color: 'var(--text-gold)' }}>Sarvatma-Bhava</em>), operating in effortless <em style={{ color: 'var(--text-gold)' }}>Sahaja Samadhi</em>.
                   </p>
                 </div>
 
@@ -296,7 +296,7 @@ export function HeroSection({ setActiveTab }) {
                     C. Videhamukti (Final Merger)
                   </h4>
                   <p style={{ color: 'var(--text-muted)', fontSize: '0.88rem', lineHeight: 1.65 }}>
-                    Upon physical death, consciousness merges into Brahman like space inside a broken pot merging into infinite cosmic space (*Ghatakasha into Mahakasha*).
+                    Upon physical death, consciousness merges into Brahman like space inside a broken pot merging into infinite cosmic space (<em style={{ color: 'var(--text-gold)' }}>Ghatakasha into Mahakasha</em>).
                   </p>
                 </div>
 
