@@ -10,15 +10,64 @@ export function Navbar({ activeTab, setActiveTab }) {
     setIsPlayingAudio(activeState);
   };
 
-  // Rearranged exact order requested by user
+  // Nav items with custom vibrant spiritual gradient themes
   const navItems = [
-    { id: 'home', label: 'Home Overview', icon: Home },
-    { id: 'syllabus', label: 'Complete Syllabus', icon: BookOpen },
-    { id: 'samvada', label: 'Guru-Disciple Samvada', icon: MessageSquare, highlight: true },
-    { id: 'roadmap', label: "Disciple's Roadmap", icon: Map },
-    { id: 'sadhana', label: 'Daily Mantras & Sadhana', icon: Scroll },
-    { id: 'diagrams', label: 'Interactive Diagrams', icon: Compass },
-    { id: 'inquiry', label: 'Self-Inquiry Studio', icon: Flame },
+    {
+      id: 'home',
+      label: 'Home Overview',
+      icon: Home,
+      activeGradient: 'linear-gradient(135deg, #ffc107, #ff8f00)',
+      activeTextColor: '#070913',
+      borderColor: '#ffc107'
+    },
+    {
+      id: 'syllabus',
+      label: 'Complete Syllabus',
+      icon: BookOpen,
+      activeGradient: 'linear-gradient(135deg, #ffd54f, #ff6d00)',
+      activeTextColor: '#070913',
+      borderColor: '#ffd54f'
+    },
+    {
+      id: 'samvada',
+      label: 'Guru-Disciple Samvada',
+      icon: MessageSquare,
+      activeGradient: 'linear-gradient(135deg, #00e5ff, #7c4dff)',
+      activeTextColor: '#ffffff',
+      borderColor: '#00e5ff'
+    },
+    {
+      id: 'roadmap',
+      label: "Disciple's Roadmap",
+      icon: Map,
+      activeGradient: 'linear-gradient(135deg, #ff6d00, #dd2c00)',
+      activeTextColor: '#ffffff',
+      borderColor: '#ff6d00'
+    },
+    {
+      id: 'sadhana',
+      label: 'Daily Mantras & Sadhana',
+      icon: Scroll,
+      activeGradient: 'linear-gradient(135deg, #00e676, #00b0ff)',
+      activeTextColor: '#070913',
+      borderColor: '#00e676'
+    },
+    {
+      id: 'diagrams',
+      label: 'Interactive Diagrams',
+      icon: Compass,
+      activeGradient: 'linear-gradient(135deg, #b388ff, #ff4081)',
+      activeTextColor: '#ffffff',
+      borderColor: '#b388ff'
+    },
+    {
+      id: 'inquiry',
+      label: 'Self-Inquiry Studio',
+      icon: Flame,
+      activeGradient: 'linear-gradient(135deg, #ffab00, #ff5252)',
+      activeTextColor: '#070913',
+      borderColor: '#ffab00'
+    },
   ];
 
   return (
@@ -50,7 +99,7 @@ export function Navbar({ activeTab, setActiveTab }) {
           </div>
         </div>
 
-        {/* Navigation Tabs */}
+        {/* Navigation Tabs with Vibrant Colorful Themes */}
         <nav style={{ display: 'flex', alignItems: 'center', gap: '0.45rem', flexWrap: 'wrap' }}>
           {navItems.map((item) => {
             const Icon = item.icon;
@@ -63,21 +112,19 @@ export function Navbar({ activeTab, setActiveTab }) {
                   padding: '0.45rem 0.85rem',
                   fontSize: '0.78rem',
                   borderRadius: '20px',
-                  border: isActive ? 'none' : '1px solid var(--border-glass)',
-                  background: isActive
-                    ? (item.highlight ? 'linear-gradient(135deg, #00e5ff, #7c4dff)' : 'linear-gradient(135deg, var(--sacred-saffron), var(--primary-gold))')
-                    : 'rgba(255, 255, 255, 0.04)',
-                  color: isActive ? (item.highlight ? '#fff' : '#070913') : 'var(--text-main)',
-                  fontWeight: isActive ? 800 : 500,
+                  border: `1.5px solid ${item.borderColor}`,
+                  background: isActive ? item.activeGradient : 'rgba(18, 24, 43, 0.7)',
+                  color: isActive ? item.activeTextColor : item.borderColor,
+                  fontWeight: isActive ? 800 : 700,
                   cursor: 'pointer',
                   display: 'inline-flex',
                   alignItems: 'center',
                   gap: '0.35rem',
-                  boxShadow: isActive ? '0 0 15px var(--gold-glow)' : 'none',
+                  boxShadow: isActive ? `0 0 18px ${item.borderColor}` : 'none',
                   transition: 'all 0.25s ease'
                 }}
               >
-                <Icon size={14} />
+                <Icon size={14} style={{ color: isActive ? item.activeTextColor : item.borderColor }} />
                 <span>{item.label}</span>
               </button>
             );
@@ -87,18 +134,18 @@ export function Navbar({ activeTab, setActiveTab }) {
           <button
             onClick={handleAudioToggle}
             style={{
-              background: isPlayingAudio ? 'var(--sacred-saffron)' : 'rgba(255, 255, 255, 0.06)',
+              background: isPlayingAudio ? 'var(--sacred-saffron)' : 'rgba(255, 109, 0, 0.15)',
               color: isPlayingAudio ? '#070913' : 'var(--primary-gold)',
-              border: '1px solid var(--border-gold)',
+              border: '1.5px solid var(--primary-gold)',
               borderRadius: '20px',
-              padding: '0.45rem 0.8rem',
+              padding: '0.45rem 0.85rem',
               display: 'flex',
               alignItems: 'center',
               gap: '0.35rem',
               fontSize: '0.78rem',
               cursor: 'pointer',
-              fontWeight: 600,
-              boxShadow: isPlayingAudio ? '0 0 15px var(--saffron-glow)' : 'none',
+              fontWeight: 700,
+              boxShadow: isPlayingAudio ? '0 0 18px var(--saffron-glow)' : 'none',
               transition: 'all 0.3s ease'
             }}
             title="Toggle 432Hz Om Meditative Drone"
