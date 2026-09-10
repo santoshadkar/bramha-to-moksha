@@ -27,15 +27,25 @@ export function HeroSection({ setActiveTab }) {
                 Welcome to the sacred portal of spiritual ascension. Journey step-by-step from the unmanifest non-dual Absolute (<strong style={{ color: 'var(--text-gold)' }}>Nirguna Brahman</strong>) and the emergence of the 24 Tattvas through the illusion of <strong style={{ color: 'var(--sacred-saffron)' }}>Samsara</strong>, culminating in non-dual freedom (<strong style={{ color: 'var(--cosmic-cyan)' }}>Moksha</strong>).
               </p>
 
-              <div style={{ display: 'flex', gap: '0.8rem', flexWrap: 'wrap' }}>
-                <button onClick={() => setActiveTab('syllabus')} className="btn-gold">
-                  <BookOpen size={18} /> Complete Syllabus
+              {/* Action Buttons Row with Direct Links to All Pages */}
+              <div style={{ display: 'flex', gap: '0.6rem', flexWrap: 'wrap' }}>
+                <button onClick={() => setActiveTab('syllabus')} className="btn-gold" style={{ padding: '0.6rem 1.2rem', fontSize: '0.85rem' }}>
+                  <BookOpen size={16} /> Complete Syllabus
                 </button>
-                <button onClick={() => setActiveTab('samvada')} className="btn-gold" style={{ background: 'linear-gradient(135deg, #00e5ff, #7c4dff)', color: '#fff' }}>
-                  <MessageSquare size={18} /> Guru-Disciple Samvada
+                <button onClick={() => setActiveTab('samvada')} className="btn-gold" style={{ padding: '0.6rem 1.2rem', fontSize: '0.85rem', background: 'linear-gradient(135deg, #00e5ff, #7c4dff)', color: '#fff' }}>
+                  <MessageSquare size={16} /> Guru-Disciple Samvada
                 </button>
-                <button onClick={() => setActiveTab('roadmap')} className="btn-gold" style={{ background: 'linear-gradient(135deg, var(--sacred-saffron), #dd2c00)', color: '#fff' }}>
-                  <Map size={18} /> Disciple's Roadmap
+                <button onClick={() => setActiveTab('roadmap')} className="btn-gold" style={{ padding: '0.6rem 1.2rem', fontSize: '0.85rem', background: 'linear-gradient(135deg, var(--sacred-saffron), #dd2c00)', color: '#fff' }}>
+                  <Map size={16} /> Disciple's Roadmap
+                </button>
+                <button onClick={() => setActiveTab('sadhana')} className="btn-outline" style={{ padding: '0.6rem 1.2rem', fontSize: '0.85rem' }}>
+                  <Scroll size={16} /> Daily Mantras
+                </button>
+                <button onClick={() => setActiveTab('diagrams')} className="btn-outline" style={{ padding: '0.6rem 1.2rem', fontSize: '0.85rem' }}>
+                  <Compass size={16} /> Diagrams
+                </button>
+                <button onClick={() => setActiveTab('inquiry')} className="btn-outline" style={{ padding: '0.6rem 1.2rem', fontSize: '0.85rem' }}>
+                  <Flame size={16} /> Self-Inquiry Studio
                 </button>
               </div>
 
@@ -82,7 +92,191 @@ export function HeroSection({ setActiveTab }) {
           </div>
         </div>
 
-        {/* FRONT PAGE FEATURE: Deep, Comprehensive Knowledge Breakdown of Brahma, Samsara, and Moksha */}
+        {/* Dedicated Page Launchers Cards Grid (All 6 Pages) */}
+        <div style={{ marginBottom: '4rem' }}>
+          <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+            <h3 className="font-cinzel gold-text-gradient" style={{ fontSize: '1.8rem', fontWeight: 800, margin: 0 }}>
+              Explore All Dedicated Modules
+            </h3>
+            <p style={{ color: 'var(--text-muted)', fontSize: '0.92rem', margin: '0.3rem 0 0 0' }}>
+              Click on any module to open its dedicated, in-depth interactive section.
+            </p>
+          </div>
+
+          <div className="grid-3">
+            
+            {/* Launcher 1: Daily Mantras & Sadhana */}
+            <div
+              className="glass-card"
+              onClick={() => setActiveTab('sadhana')}
+              style={{ padding: '1.8rem', border: '1.5px solid var(--sacred-saffron)', cursor: 'pointer', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}
+            >
+              <div>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.8rem' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--sacred-saffron)' }}>
+                    <Scroll size={22} />
+                    <h3 className="font-cinzel" style={{ fontSize: '1.25rem', color: '#fff', margin: 0 }}>
+                      Daily Mantras & Sadhana
+                    </h3>
+                  </div>
+                  <ChevronRight size={18} style={{ color: 'var(--sacred-saffron)' }} />
+                </div>
+                <p className="font-sanskrit" style={{ color: 'var(--text-gold)', fontSize: '0.9rem', marginBottom: '0.8rem' }}>
+                  नित्यसाधना मन्त्रानुष्ठानम्
+                </p>
+                <p style={{ color: 'var(--text-muted)', fontSize: '0.88rem', lineHeight: 1.6, marginBottom: '1.2rem' }}>
+                  Morning waking slokas (*Kara-Darshanam*), Bhojana Mantra, Gayatri, Mahamrityunjaya, twilight meditation, and night surrender slokas.
+                </p>
+              </div>
+              <span style={{ color: 'var(--sacred-saffron)', fontSize: '0.82rem', fontWeight: 700, display: 'inline-flex', alignItems: 'center', gap: '0.3rem' }}>
+                Open Daily Mantras Page <ChevronRight size={14} />
+              </span>
+            </div>
+
+            {/* Launcher 2: Guru-Disciple Samvada */}
+            <div
+              className="glass-card"
+              onClick={() => setActiveTab('samvada')}
+              style={{ padding: '1.8rem', border: '1.5px solid var(--cosmic-cyan)', cursor: 'pointer', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}
+            >
+              <div>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.8rem' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--cosmic-cyan)' }}>
+                    <MessageSquare size={22} />
+                    <h3 className="font-cinzel" style={{ fontSize: '1.25rem', color: '#fff', margin: 0 }}>
+                      Guru-Disciple Samvada
+                    </h3>
+                  </div>
+                  <ChevronRight size={18} style={{ color: 'var(--cosmic-cyan)' }} />
+                </div>
+                <p className="font-sanskrit" style={{ color: 'var(--text-gold)', fontSize: '0.9rem', marginBottom: '0.8rem' }}>
+                  गुरुशिष्यसंवादः
+                </p>
+                <p style={{ color: 'var(--text-muted)', fontSize: '0.88rem', lineHeight: 1.6, marginBottom: '1.2rem' }}>
+                  14 interactive Q&A exchanges between the disciple (*Shishya*) and Enlightened Guru on the dais with Sanskrit slokas and Upanishadic quotes.
+                </p>
+              </div>
+              <span style={{ color: 'var(--cosmic-cyan)', fontSize: '0.82rem', fontWeight: 700, display: 'inline-flex', alignItems: 'center', gap: '0.3rem' }}>
+                Open Dialogue Page <ChevronRight size={14} />
+              </span>
+            </div>
+
+            {/* Launcher 3: Disciple's Roadmap */}
+            <div
+              className="glass-card"
+              onClick={() => setActiveTab('roadmap')}
+              style={{ padding: '1.8rem', border: '1.5px solid var(--primary-gold)', cursor: 'pointer', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}
+            >
+              <div>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.8rem' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--primary-gold)' }}>
+                    <Map size={22} />
+                    <h3 className="font-cinzel" style={{ fontSize: '1.25rem', color: '#fff', margin: 0 }}>
+                      Disciple's Roadmap
+                    </h3>
+                  </div>
+                  <ChevronRight size={18} style={{ color: 'var(--primary-gold)' }} />
+                </div>
+                <p className="font-sanskrit" style={{ color: 'var(--text-gold)', fontSize: '0.9rem', marginBottom: '0.8rem' }}>
+                  साधनमार्गः तपश्च
+                </p>
+                <p style={{ color: 'var(--text-muted)', fontSize: '0.88rem', lineHeight: 1.6, marginBottom: '1.2rem' }}>
+                  Detailed 6-stage roadmap with daily spiritual tapas, mental discipline, prescribed scriptures, spiritual obstacles (*Vighnas*), and milestones.
+                </p>
+              </div>
+              <span style={{ color: 'var(--primary-gold)', fontSize: '0.82rem', fontWeight: 700, display: 'inline-flex', alignItems: 'center', gap: '0.3rem' }}>
+                Open Disciple's Roadmap <ChevronRight size={14} />
+              </span>
+            </div>
+
+            {/* Launcher 4: Complete Syllabus */}
+            <div
+              className="glass-card"
+              onClick={() => setActiveTab('syllabus')}
+              style={{ padding: '1.8rem', border: '1.5px solid var(--primary-gold)', cursor: 'pointer', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}
+            >
+              <div>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.8rem' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--primary-gold)' }}>
+                    <BookOpen size={22} />
+                    <h3 className="font-cinzel" style={{ fontSize: '1.25rem', color: '#fff', margin: 0 }}>
+                      Complete Syllabus
+                    </h3>
+                  </div>
+                  <ChevronRight size={18} style={{ color: 'var(--primary-gold)' }} />
+                </div>
+                <p className="font-sanskrit" style={{ color: 'var(--text-gold)', fontSize: '0.9rem', marginBottom: '0.8rem' }}>
+                  अष्टज्ञानसोपानानि
+                </p>
+                <p style={{ color: 'var(--text-muted)', fontSize: '0.88rem', lineHeight: 1.6, marginBottom: '1.2rem' }}>
+                  Complete 8-stage Vedantic curriculum from Cosmic Creation (*Brahma*) to Non-Dual Freedom (*Moksha*) with Sanskrit verse analysis.
+                </p>
+              </div>
+              <span style={{ color: 'var(--primary-gold)', fontSize: '0.82rem', fontWeight: 700, display: 'inline-flex', alignItems: 'center', gap: '0.3rem' }}>
+                Open Complete Syllabus <ChevronRight size={14} />
+              </span>
+            </div>
+
+            {/* Launcher 5: Interactive Diagrams */}
+            <div
+              className="glass-card"
+              onClick={() => setActiveTab('diagrams')}
+              style={{ padding: '1.8rem', border: '1.5px solid var(--cosmic-cyan)', cursor: 'pointer', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}
+            >
+              <div>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.8rem' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--cosmic-cyan)' }}>
+                    <Compass size={22} />
+                    <h3 className="font-cinzel" style={{ fontSize: '1.25rem', color: '#fff', margin: 0 }}>
+                      Interactive Diagrams
+                    </h3>
+                  </div>
+                  <ChevronRight size={18} style={{ color: 'var(--cosmic-cyan)' }} />
+                </div>
+                <p className="font-sanskrit" style={{ color: 'var(--text-gold)', fontSize: '0.9rem', marginBottom: '0.8rem' }}>
+                  प्रत्यक्षचित्राणि
+                </p>
+                <p style={{ color: 'var(--text-muted)', fontSize: '0.88rem', lineHeight: 1.6, marginBottom: '1.2rem' }}>
+                  4 dynamic visual inspectors: 24 Tattvas Cosmic Tree, Concentric Pancha Kosha, 7 Sapta Jnana Bhumikas, and 7 Chakras & Subtle Nadis.
+                </p>
+              </div>
+              <span style={{ color: 'var(--cosmic-cyan)', fontSize: '0.82rem', fontWeight: 700, display: 'inline-flex', alignItems: 'center', gap: '0.3rem' }}>
+                Open Interactive Diagrams <ChevronRight size={14} />
+              </span>
+            </div>
+
+            {/* Launcher 6: Self-Inquiry Studio */}
+            <div
+              className="glass-card"
+              onClick={() => setActiveTab('inquiry')}
+              style={{ padding: '1.8rem', border: '1.5px solid var(--sacred-saffron)', cursor: 'pointer', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}
+            >
+              <div>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.8rem' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--sacred-saffron)' }}>
+                    <Flame size={22} />
+                    <h3 className="font-cinzel" style={{ fontSize: '1.25rem', color: '#fff', margin: 0 }}>
+                      Self-Inquiry Studio
+                    </h3>
+                  </div>
+                  <ChevronRight size={18} style={{ color: 'var(--sacred-saffron)' }} />
+                </div>
+                <p className="font-sanskrit" style={{ color: 'var(--text-gold)', fontSize: '0.9rem', marginBottom: '0.8rem' }}>
+                  आत्मविचारपीठम्
+                </p>
+                <p style={{ color: 'var(--text-muted)', fontSize: '0.88rem', lineHeight: 1.6, marginBottom: '1.2rem' }}>
+                  Atma Vichara silence timer, step-by-step *Neti-Neti* 5-sheath dis-identification meditation, Vedantic glossary, and knowledge quiz.
+                </p>
+              </div>
+              <span style={{ color: 'var(--sacred-saffron)', fontSize: '0.82rem', fontWeight: 700, display: 'inline-flex', alignItems: 'center', gap: '0.3rem' }}>
+                Open Self-Inquiry Studio <ChevronRight size={14} />
+              </span>
+            </div>
+
+          </div>
+        </div>
+
+        {/* Deep Metaphysics Breakdown of Brahma, Samsara, and Moksha */}
         <div style={{ marginBottom: '4rem' }}>
           
           <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
