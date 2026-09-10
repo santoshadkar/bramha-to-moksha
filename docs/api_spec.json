@@ -1,0 +1,67 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SpiritualAwakeningPortalAPI",
+  "version": "1.0.0",
+  "description": "API First Schema Specification for Brahma to Moksha Spiritual Journey Syllabus, Diagrams, and Meditation Engine",
+  "definitions": {
+    "SyllabusStage": {
+      "type": "object",
+      "required": ["id", "title", "sanskritTitle", "level", "summary", "details", "keyConcept", "scriptures", "contemplation"],
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "sanskritTitle": { "type": "string" },
+        "level": { "type": "integer", "minimum": 1, "maximum": 8 },
+        "summary": { "type": "string" },
+        "details": { "type": "string" },
+        "keyConcept": { "type": "string" },
+        "scriptures": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "contemplation": { "type": "string" }
+      }
+    },
+    "DiagramNode": {
+      "type": "object",
+      "required": ["id", "label", "sanskrit", "description"],
+      "properties": {
+        "id": { "type": "string" },
+        "label": { "type": "string" },
+        "sanskrit": { "type": "string" },
+        "description": { "type": "string" },
+        "color": { "type": "string" }
+      }
+    }
+  },
+  "endpoints": {
+    "/api/v1/syllabus": {
+      "get": {
+        "summary": "Retrieve complete 8-stage spiritual journey syllabus from Brahma to Moksha",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": { "$ref": "#/definitions/SyllabusStage" }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/diagrams/tattvas": {
+      "get": {
+        "summary": "Retrieve 24 Tattvas cosmic descent hierarchy nodes",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": { "$ref": "#/definitions/DiagramNode" }
+            }
+          }
+        }
+      }
+    }
+  }
+}
