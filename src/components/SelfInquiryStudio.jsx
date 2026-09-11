@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Flame, Play, Pause, RefreshCw, Sparkles, Search, BookOpen, Layers, CheckCircle2, Award, HelpCircle } from 'lucide-react';
 
-const VEDANTIC_GLOSSARY = [
+export const VEDANTIC_GLOSSARY = [
   { term: "Adhyasa", sanskrit: "अध्यासः", meaning: "Superimposition; mistaking the non-Self (body/mind) for the Self (Atman)." },
   { term: "Aham-Vritti", sanskrit: "अहंवृत्तिः", meaning: "The primary 'I-thought' that gives birth to all subsequent mental thoughts." },
   { term: "Anatman", sanskrit: "अनात्मा", meaning: "Non-Self; everything impermanent, changing, or objectified." },
@@ -29,7 +29,7 @@ const VEDANTIC_GLOSSARY = [
   { term: "Viveka", sanskrit: "विवेकः", meaning: "Intellectual discrimination between the Eternal Real and transient unreal." }
 ];
 
-const QUIZ_QUESTIONS = [
+export const QUIZ_QUESTIONS = [
   {
     q: "What is the ultimate definition of Satya (Truth) in Advaita Vedanta?",
     options: ["Anything that can be seen with eyes", "That which remains unchanged across past, present, and future", "Whatever feels good to the mind", "Physical scientific objects"],
